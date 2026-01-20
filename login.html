@@ -4,20 +4,25 @@
     <meta charset="UTF-8">
     <title>Acceso | Recuerdos de Kaori</title>
 
+    <!-- CSS principal del login -->
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
+    <!-- CONTENEDOR GENERAL -->
     <div class="login-container">
 
+        <!-- CAJA TRASERA (texto + botones) -->
         <div class="caja__trasera">
 
+            <!-- TEXTO LOGIN -->
             <div class="caja__trasera-login">
                 <h3>¿Ya tienes cuenta?</h3>
                 <p>Inicia sesión para continuar</p>
                 <button id="btn__iniciar-sesion">Iniciar Sesión</button>
             </div>
 
+            <!-- TEXTO REGISTRO -->
             <div class="caja__trasera-register">
                 <h3>¿Aún no tienes cuenta?</h3>
                 <p>Regístrate y comienza</p>
@@ -26,40 +31,40 @@
 
         </div>
 
+        <!-- CONTENEDOR DE FORMULARIOS -->
         <div class="contenedor__login-register">
 
-            <!-- LOGIN -->
-<form id="loginForm" class="formulario__login">
-    <h2>Iniciar Sesión</h2>
+            <!-- FORMULARIO LOGIN -->
+            <form id="loginForm" class="formulario__login">
+                <h2>Iniciar Sesión</h2>
 
-    <input id="loginUser" type="text" placeholder="Usuario">
-    <input id="loginPass" type="password" placeholder="Contraseña">
+                <input id="loginUser" type="text" placeholder="Usuario" required>
+                <input id="loginPass" type="password" placeholder="Contraseña" required>
 
-    <button type="submit">Entrar</button>
-</form>
+                <button type="submit">Entrar</button>
+            </form>
 
-<!-- REGISTRO -->
-<form id="registerForm" class="formulario__register">
-    <h2>Registro</h2>
+            <!-- FORMULARIO REGISTRO -->
+            <form id="registerForm" class="formulario__register">
+                <h2>Registro</h2>
 
-    <input id="regUser" type="text" placeholder="Usuario">
-    <input id="regPass" type="password" placeholder="Contraseña">
+                <input id="regUser" type="text" placeholder="Usuario" required>
+                <input id="regPass" type="password" placeholder="Contraseña" required>
 
-    <button type="submit">Registrarse</button>
-</form>
-
+                <button type="submit">Registrarse</button>
+            </form>
 
         </div>
     </div>
 
+    <!-- MENSAJES DEL SISTEMA -->
     <p id="msg" class="msg"></p>
 
+    <!-- JS QUE CONTROLA EL CAMBIO VISUAL -->
     <script src="js/login-ui.js"></script>
+
+    <!-- JS QUE HABLA CON EL BACKEND -->
     <script src="js/auth.js"></script>
 
 </body>
 </html>
-
-
-
-
