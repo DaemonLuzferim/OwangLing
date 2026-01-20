@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ==================================================
+         META BÁSICOS
+         charset: caracteres en español
+         viewport: responsive para móvil
+    =================================================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muro de Kaori</title>
+
+    <!-- ==================================================
+         CSS DEL MURO
+         style.css:
+         - estilos base del muro
+         - galería
+         - modal
+         - temas oscuro / claro
+    =================================================== -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================================================
+         HEADER
+         - Título del muro
+         - Botón logout (función en auth.js)
+    =================================================== -->
+    <header id="header">
+        <h1>🌸 Muro de Kaori</h1>
+        <button onclick="logout()" class="btn-logout">
+            Cerrar sesión
+        </button>
+    </header>
+
+    <!-- ==================================================
+         CONTENIDO PRINCIPAL DEL MURO
+    =================================================== -->
+    <main class="muro">
+
+        <!-- ==============================================
+             SECCIÓN INTRO
+             Texto emocional / presentación
+        =============================================== -->
+        <section class="intro">
+            <h2>Bienvenido Adrian</h2>
+            <p>
+                Este espacio es privado.
+                Aquí guardas recuerdos, momentos y fotos especiales.
+            </p>
+        </section>
+
+        <!-- ==============================================
+             GALERÍA ESTÁTICA (IMÁGENES LOCALES)
+             .grid → usada por gallery.js para modal
+        =============================================== -->
+        <section class="galeria">
+            <h3>📷 Recuerdos</h3>
+
+            <div class="grid">
+                <img src="../img/Kaori1.jpg" alt="Kaori 1">
+                <img src="../img/Kaori2.jpg" alt="Kaori 2">
+                <img src="../img/Kaori3.jpg" alt="Kaori 3">
+                <img src="../img/Kaori4.jpg" alt="Kaori 4">
+                <img src="../img/Kaori5.jpg" alt="Kaori 5">
+            </div>
+        </section>
+
+        <!-- ==============================================
+             INPUT DE SUBIDA DE IMÁGENES
+             - Usado por upload.js
+             - Envía imágenes al backend
+        =============================================== -->
+        <section class="upload">
+            <h3>⬆️ Subir recuerdo</h3>
+            <input type="file" id="uploadInput" accept="image/*">
+        </section>
+
+        <!-- ==============================================
+             CARRUSEL DINÁMICO (BACKEND)
+             .photo-carousel:
+             - upload.js agrega imágenes aquí
+             - carousel.js permite arrastrar
+             - gallery.js abre modal al click
+        =============================================== -->
+        <section class="galeria">
+            <h3>🖼️ Recuerdos guardados</h3>
+
+            <div class="photo-carousel">
+                <!-- Las imágenes se cargan dinámicamente -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================================================
+         FOOTER
+         Información del estado del muro
+    =================================================== -->
+    <footer>
+        <p>🔒 Muro privado · Acceso protegido</p>
+    </footer>
+
+    <!-- ==================================================
+         JAVASCRIPT
+         ⚠️ ORDEN IMPORTANTE
+    =================================================== -->
+    <!-- auth.js
+         - Maneja logout()
+         - NO protege páginas -->
+    <script src="../js/auth.js"></script>
+
+    <!-- guard.js
+         - Protege el muro
+         - Redirige si no hay sesión -->
+    <script src="js/guard.js"></script>
+
+    <!-- gallery.js
+         - Modal de imágenes
+         - Debe ir antes de upload.js -->
+    <script src="js/gallery.js"></script>
+
+    <!-- carousel.js
+         - Arrastre horizontal del carrusel -->
+    <script src="js/carousel.js"></script>
+
+    <!-- upload.js
+         - Subida y carga desde backend -->
+    <script src="js/upload.js"></script>
+
+    <!-- themes.js
+         - Tema oscuro / claro
+         - Guarda preferencia -->
+    <script src="js/themes.js"></script>
+
+</body>
+</html>

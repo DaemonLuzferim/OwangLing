@@ -1,0 +1,24 @@
+/
+├── index.html              ← PÚBLICA (solo botón login)
+├── login.html              ← LOGIN / REGISTER
+│
+├── css/
+│   ├── base.css
+│   ├── login.css
+│   └── auth-ui.css         ← (nuevo, para login moderno)
+│
+├── js/
+│   ├── auth.js             ← LOGIN / REGISTER / LOGOUT
+│   ├── roles.js            ← PROTECCIÓN
+│   └── header.js
+│
+├── muro_perfil/
+│   ├── index.html          ← MURO (privado)
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       ├── themes.js
+│       ├── gallery.js
+│       └── guard.js        ← PROTECCIÓN DE MURO
+│
+└── img/

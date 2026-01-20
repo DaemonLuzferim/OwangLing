@@ -1,0 +1,118 @@
+/* ======================================================
+   style.css
+   ESTILO PRINCIPAL DEL MURO PRIVADO
+====================================================== */
+
+/* VARIABLES DE TEMA */
+:root {
+    --bg: #050505;
+    --panel: #0b0b0b;
+    --text: #ddd;
+    --accent: crimson;
+}
+
+/* TEMA CLARO */
+body.light {
+    --bg: #f2f2f2;
+    --panel: #ffffff;
+    --text: #111;
+    --accent: #b00000;
+}
+
+/* BASE */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* HEADER */
+header {
+    background: var(--panel);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #300;
+}
+
+    header h1 {
+        margin: 0;
+        color: var(--accent);
+    }
+
+.btn-logout {
+    padding: 8px 16px;
+    background: var(--accent);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* CONTENIDO */
+.muro {
+    padding: 20px;
+}
+
+/* INTRO */
+.intro {
+    background: var(--panel);
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+
+/* GALERÍA */
+.galeria h3 {
+    margin-bottom: 10px;
+    color: var(--accent);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+    .grid img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+        .grid img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+/* VISOR MODAL */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+    .modal img {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 10px;
+    font-size: 13px;
+    opacity: 0.7;
+}

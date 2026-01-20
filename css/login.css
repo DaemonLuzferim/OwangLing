@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle at top, #120000, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* CAJA TRASERA */
+.caja__trasera {
+    width: 800px;
+    height: 420px;
+    background: #0b0b0b;
+    border: 1px solid #300;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    box-shadow: 0 0 30px crimson;
+}
+
+    .caja__trasera div {
+        width: 50%;
+        padding: 40px;
+        color: #ddd;
+        transition: opacity 0.3s;
+    }
+
+    .caja__trasera h3 {
+        margin-top: 0;
+        color: crimson;
+    }
+
+    .caja__trasera button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: transparent;
+        border: 1px solid crimson;
+        color: crimson;
+        cursor: pointer;
+    }
+
+/* CONTENEDOR FORMULARIOS */
+.contenedor__login-register {
+    position: relative;
+    width: 360px;
+    height: 420px;
+    left: 10px;
+    transition: left 0.4s ease;
+}
+
+/* FORMULARIOS */
+.formulario__login,
+.formulario__register {
+    width: 360px;
+    padding: 30px;
+    background: #050505;
+    border: 1px solid #300;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.formulario__login {
+    display: block;
+}
+
+    .formulario__login h2,
+    .formulario__register h2 {
+        color: crimson;
+        text-align: center;
+    }
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background: #000;
+    border: 1px solid #300;
+    color: #ddd;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    background: crimson;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 850px) {
+
+    .caja__trasera {
+        display: none;
+    }
+
+    .contenedor__login-register {
+        left: 0;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- =============================
+         METADATOS BÁSICOS
+    ============================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuerdos de Kaori</title>
+
+    <!-- =============================
+         CSS GENERAL
+         Estilos base públicos
+    ============================== -->
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+
+    <!-- =============================
+         HEADER PÚBLICO
+         Visible sin login
+    ============================== -->
+    <header id="header">
+        <!-- Logo / imagen -->
+        <img src="img/Kaori1.jpg" alt="Logo" class="logo">
+
+        <!-- Botón que REDIRIGE al login -->
+        <a href="login.html" class="Ingresar">
+            Iniciar sesión
+        </a>
+    </header>
+
+    <!-- =============================
+         CONTENIDO PRINCIPAL
+         Información pública
+    ============================== -->
+    <main style="margin-top: 80px;">
+
+        <h1 id="titulo" style="text-align:center;">
+            Fotos de mi <span style="color: rgb(9,45,187);">Hija</span>
+        </h1>
+
+        <hr>
+
+        <!-- Presentación -->
+        <section>
+            <article class="post">
+                <h2 style="text-align:center;">Bienvenido</h2>
+                <p>
+                    Este es un espacio personal de recuerdos.
+                    Para acceder al contenido privado debes iniciar sesión.
+                </p>
+            </article>
+        </section>
+
+        <!-- Galería pública -->
+        <section class="galeria">
+            <div class="fila">
+                <img class="img" src="img/Kaori1.jpg" alt="">
+                <img class="img" src="img/Kaori2.jpg" alt="">
+                <img class="img" src="img/Kaori3.jpg" alt="">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =============================
+         FOOTER
+    ============================== -->
+    <footer>
+        <p>© 2024 – Recuerdos de Kaori</p>
+    </footer>
+
+    <!-- =============================
+         JS SOLO VISUAL
+         (NO auth, NO roles)
+    ============================== -->
+    <script src="js/header.js"></script>
+
+</body>
+</html>

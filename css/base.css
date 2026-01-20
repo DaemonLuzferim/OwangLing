@@ -1,0 +1,157 @@
+/* ======================================================
+   base.css
+   ESTILOS GENERALES DEL PROYECTO
+   No incluye lógica de login ni animaciones
+====================================================== */
+
+/* ======================================================
+   VARIABLES GLOBALES
+====================================================== */
+:root {
+    --bg: #050505; /* Fondo principal */
+    --panel: #0b0b0b; /* Paneles */
+    --border: #300; /* Bordes oscuros */
+    --accent: crimson; /* Color acento */
+    --text: #ddd; /* Texto general */
+    --main-color: #0f8a03; /* Botones principales */
+}
+
+/* ======================================================
+   RESET BÁSICO
+====================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======================================================
+   DOCUMENTO GENERAL
+====================================================== */
+html {
+    font-family: "Open Sans", Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* ======================================================
+   HEADER GLOBAL
+====================================================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(5, 5, 5, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
+    height: 48px;
+}
+
+/* ======================================================
+   BOTONES REUTILIZABLES
+====================================================== */
+.Ingresar,
+.Retorno {
+    padding: 8px 20px;
+    border-radius: 30px;
+    background-color: var(--main-color);
+    color: #e0e0e0;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+    .Ingresar:hover,
+    .Retorno:hover {
+        background-color: #12b305;
+        color: #001f4d;
+    }
+
+/* ======================================================
+   CONTENIDO PRINCIPAL
+====================================================== */
+main {
+    padding: 20px;
+}
+
+/* ======================================================
+   TÍTULOS
+====================================================== */
+#titulo {
+    color: rgb(32, 4, 118);
+}
+
+h1 {
+    margin: 8px 0;
+    font-size: 18px;
+    color: rgb(149, 5, 5);
+    text-align: center;
+}
+
+h2 {
+    color: #4da3ff;
+}
+
+p {
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+/* ======================================================
+   BLOQUES / POST
+====================================================== */
+.post {
+    background: var(--panel);
+    padding: 15px;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+/* ======================================================
+   GALERÍA
+====================================================== */
+.galeria {
+    margin-top: 20px;
+}
+
+.fila {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+/* ======================================================
+   FOOTER
+====================================================== */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 14px;
+}
