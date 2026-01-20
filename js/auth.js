@@ -1,5 +1,5 @@
 /* ===============================
-   CONFIGURACIÓN BACKEND
+   CONFIGURACIÃ“N BACKEND
 ================================ */
 const API_URL = "https://rabbitwars.onrender.com";
 const STORAGE_KEY = "auth_user";
@@ -12,10 +12,14 @@ function saveSession(data) {
 }
 
 function showMsg(text, ok = false) {
-    const msg = document.getElementById("msg");
-    if (!msg) return;
+    let msg = document.getElementById("msg");
+    if (!msg) {
+        msg = document.createElement("div");
+        msg.id = "msg";
+        document.body.appendChild(msg);
+    }
     msg.textContent = text;
-    msg.className = "msg " + (ok ? "success" : "error");
+    msg.className = ok ? "msg success" : "msg error";
 }
 
 /* ===============================
@@ -44,7 +48,7 @@ if (loginForm) {
         const data = await res.json();
 
         if (!res.ok) {
-            showMsg(data.msg || "Error al iniciar sesión");
+            showMsg(data.msg || "Usuario o contraseÃ±a incorrectos");
             return;
         }
 
@@ -87,6 +91,6 @@ if (registerForm) {
             return;
         }
 
-        showMsg("Registro exitoso, ahora inicia sesión", true);
+        showMsg("Registro exitoso, ahora inicia sesiÃ³n", true);
     });
 }
